@@ -2,15 +2,8 @@
 {
     partial class MainForm
     {
-        /// <summary>
-        /// Обязательная переменная конструктора.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Освободить все используемые ресурсы.
-        /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,20 +13,14 @@
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
-
-        /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
-        /// </summary>
         private void InitializeComponent()
         {
             this.btnSelectFile = new System.Windows.Forms.Button();
             this.grpFileInfo = new System.Windows.Forms.GroupBox();
-            this.lblFileName = new System.Windows.Forms.Label();
-            this.lblDuration = new System.Windows.Forms.Label();
-            this.lblFileType = new System.Windows.Forms.Label();
             this.lblFileSize = new System.Windows.Forms.Label();
+            this.lblFileType = new System.Windows.Forms.Label();
+            this.lblDuration = new System.Windows.Forms.Label();
+            this.lblFileName = new System.Windows.Forms.Label();
             this.trkFreq1 = new System.Windows.Forms.TrackBar();
             this.trkFreq2 = new System.Windows.Forms.TrackBar();
             this.trkFreq3 = new System.Windows.Forms.TrackBar();
@@ -84,7 +71,7 @@
             this.btnSelectFile.TabIndex = 0;
             this.btnSelectFile.Text = "Выбрать файл";
             this.btnSelectFile.UseVisualStyleBackColor = true;
-            this.btnSelectFile.Click += new System.EventHandler(this.button1_Click);
+            this.btnSelectFile.Click += new System.EventHandler(this.BtnSelectFile_Click);
             // 
             // grpFileInfo
             // 
@@ -103,41 +90,41 @@
             this.grpFileInfo.TabStop = false;
             this.grpFileInfo.Text = "File information";
             // 
-            // lblFileName
+            // lblFileSize
             // 
-            this.lblFileName.AutoSize = true;
-            this.lblFileName.Location = new System.Drawing.Point(6, 34);
-            this.lblFileName.Name = "lblFileName";
-            this.lblFileName.Size = new System.Drawing.Size(52, 21);
-            this.lblFileName.TabIndex = 0;
-            this.lblFileName.Text = "Name";
-            // 
-            // lblDuration
-            // 
-            this.lblDuration.AutoSize = true;
-            this.lblDuration.Location = new System.Drawing.Point(6, 117);
-            this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(72, 21);
-            this.lblDuration.TabIndex = 1;
-            this.lblDuration.Text = "Duration";
+            this.lblFileSize.AutoSize = true;
+            this.lblFileSize.Location = new System.Drawing.Point(6, 289);
+            this.lblFileSize.Name = "lblFileSize";
+            this.lblFileSize.Size = new System.Drawing.Size(75, 21);
+            this.lblFileSize.TabIndex = 3;
+            this.lblFileSize.Text = "File size: ";
             // 
             // lblFileType
             // 
             this.lblFileType.AutoSize = true;
             this.lblFileType.Location = new System.Drawing.Point(6, 202);
             this.lblFileType.Name = "lblFileType";
-            this.lblFileType.Size = new System.Drawing.Size(71, 21);
+            this.lblFileType.Size = new System.Drawing.Size(80, 21);
             this.lblFileType.TabIndex = 2;
-            this.lblFileType.Text = "File type";
+            this.lblFileType.Text = "File type: ";
             // 
-            // lblFileSize
+            // lblDuration
             // 
-            this.lblFileSize.AutoSize = true;
-            this.lblFileSize.Location = new System.Drawing.Point(6, 289);
-            this.lblFileSize.Name = "lblFileSize";
-            this.lblFileSize.Size = new System.Drawing.Size(66, 21);
-            this.lblFileSize.TabIndex = 3;
-            this.lblFileSize.Text = "File size";
+            this.lblDuration.AutoSize = true;
+            this.lblDuration.Location = new System.Drawing.Point(6, 117);
+            this.lblDuration.Name = "lblDuration";
+            this.lblDuration.Size = new System.Drawing.Size(81, 21);
+            this.lblDuration.TabIndex = 1;
+            this.lblDuration.Text = "Duration: ";
+            // 
+            // lblFileName
+            // 
+            this.lblFileName.AutoSize = true;
+            this.lblFileName.Location = new System.Drawing.Point(6, 34);
+            this.lblFileName.Name = "lblFileName";
+            this.lblFileName.Size = new System.Drawing.Size(61, 21);
+            this.lblFileName.TabIndex = 0;
+            this.lblFileName.Text = "Name: ";
             // 
             // trkFreq1
             // 
@@ -249,7 +236,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 18);
             this.label1.TabIndex = 13;
-            this.label1.Text = "31";
+            this.label1.Text = "32";
             // 
             // label2
             // 
@@ -260,7 +247,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 18);
             this.label2.TabIndex = 14;
-            this.label2.Text = "62";
+            this.label2.Text = "64";
             // 
             // label3
             // 
@@ -399,6 +386,7 @@
             this.btnSave.TabIndex = 27;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // MainForm
             // 
@@ -453,10 +441,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trkSpatial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
-
-        #endregion
 
         private System.Windows.Forms.Button btnSelectFile;
         private System.Windows.Forms.GroupBox grpFileInfo;
@@ -492,4 +477,3 @@
         private System.Windows.Forms.Button btnSave;
     }
 }
-
